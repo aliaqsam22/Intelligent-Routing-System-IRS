@@ -78,6 +78,7 @@ Widget Textfield(BuildContext context,Color color, String hint,bool isfilled) {
                     focusColor: const Color(0xffDADADA)),
 
                 onFieldSubmitted: (value){
+                  print(value);
                   getAddresses(value,tomtomHQ.latitude,tomtomHQ.longitude);
                 }
             )

@@ -127,7 +127,7 @@ class MyLogin extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const MyPassword()));
+                                             MyPassword()));
                               },
                             text: 'Forget Password',
                             style: const TextStyle(
