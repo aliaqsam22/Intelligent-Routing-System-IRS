@@ -22,11 +22,15 @@ class _MyHomeState extends State<Home> {
     // TODO: implement dispose
     super.dispose();
   }
-
+  void updateMarkers(List<Marker> newMarkers) {
+    setState(() {
+      markers = newMarkers;
+    });
+  }
   final tomtomHQ = new LatLng(52.376372, 4.908066);
 
   final initialMarker =
-  new Marker(
+  Marker(
     width: 50.0,
     height: 50.0,
     point: LatLng(52.376372, 4.908066),
@@ -35,6 +39,12 @@ class _MyHomeState extends State<Home> {
         size: 60.0,
         color: Colors.red),
   );
+  @override
+  void initState() {
+    super.initState();
+    markers;
+
+  }
   getAddresses(value, lat, lon) async {
     final Map<String, String> queryParameters = {'key': '$apiKey'};
     queryParameters['lat'] = '$lat';
@@ -47,28 +57,99 @@ class _MyHomeState extends State<Home> {
     var results = jsonData['results'];
     for (var element in results) {
       var position = element['position'];
-      var marker = new Marker(
+      var poi=element['poi'];
+      var address=element['address'];
+      var marker = Marker(
         point: new LatLng(position['lat'], position['lon']),
         width: 50.0,
         height: 50.0,
         child:
-        const Icon(
-            Icons.location_on,
-            size: 40.0,
-            color: Colors.blue),
+               InkWell(
+                  child:Icon(Icons.location_on),
+                 onTap: (){
+                    showModalBottomSheet<void>(
+                   context: context,
+                   builder: (BuildContext context) {
+                     return  SizedBox(
+                       height: 200,
+                       width: 500,
+                       child: Column(
+                           mainAxisAlignment: MainAxisAlignment.start,
+                           children: [
+                             Text(poi['name'],
+                               style:const TextStyle(
+                                 fontSize: 30,
+
+                               ),
+                             ),
+                               Text(address['freeformAddress'],
+                                 style:const TextStyle(
+                                   fontSize: 20,
+                                 ),
+                               ),
+                               ],
+                             )
+                             );
+                   }
+                   );
+                   },
+                 )
       );
       markers.add(marker);
       markers.add(initialMarker);
+      print(poi['name']);
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 227, 208, 230),
       body:Stack(children:[
-        Expanded(child: MapView(markers: [],)),
+        Expanded(child: FlutterMap(
+      options:MapOptions(center: tomtomHQ, zoom: 13.0),
+      children:[
+
+        TileLayer(  urlTemplate: "https://api.tomtom.com/map/1/tile/basic/night/"
+            "{z}/{x}/{y}.png?key={apiKey}",
+          additionalOptions: {"apiKey": apiKey},
+        ),
+        MarkerLayer(
+          markers: markers,
+        ),
+      ],
+    )),
         Row(
-        children: [Expanded(child: Textfield(context, Colors.white70, 'Search', true))],)
+        children: [Expanded(
+        child:TextFormField(
+            decoration: InputDecoration(
+
+                hintText: 'Search',
+                fillColor: Colors.white70,
+                filled: false,
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Colors.black54,
+                    )),
+                enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Color(0xffDADADA),
+                    )),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: const BorderSide(
+                      color: Color(0xffDADADA),
+                    )),
+                focusColor: const Color(0xffDADADA)),
+
+            onFieldSubmitted: (value){
+              print(value);
+              getAddresses(value,tomtomHQ.latitude,tomtomHQ.longitude);
+            }
+        )
+        )],)
       ]),
       floatingActionButton:  FloatingActionButton(
         onPressed:(){},

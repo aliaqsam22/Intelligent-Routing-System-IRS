@@ -12,12 +12,17 @@ class MyRoute extends StatefulWidget {
 }
 class RouteState extends State<MyRoute>{
   List<Marker> markers = List.empty(growable: true);
+  void updateMarkers(List<Marker> newMarkers) {
+    setState(() {
+      markers = newMarkers;
+    });
+  }
    final TextEditingController _searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(children:[Expanded(
-        child:MapView(markers: [],),
+        child:MapView(markers: []),
       ),Row(children:[
         Container(
           width:MediaQuery.of(context).size.width * 0.5,

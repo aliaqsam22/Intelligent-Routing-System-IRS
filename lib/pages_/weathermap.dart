@@ -16,12 +16,17 @@ class WeatherMap extends StatefulWidget {
 }
 class WeatherMapState extends State<WeatherMap>{
   List<Marker> markers = List.empty(growable: true);
+  void updateMarkers(List<Marker> newMarkers) {
+    setState(() {
+      markers = newMarkers;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 227, 208, 230),
       body:Stack(children:[Expanded(
-        child: MapView(markers: [],)
+        child: MapView(markers: [])
       ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
