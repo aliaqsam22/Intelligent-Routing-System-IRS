@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import '../widgets/textfield.dart';
-import '../widgets/mapwidget.dart';
+
 import 'package:latlong2/latlong.dart';
 import "package:http/http.dart" as http;
 import "dart:convert" as convert;
 
 class Home extends StatefulWidget {
-  const Home({super.key, required String title});
+  const Home({super.key,});
 
   @override
   State<Home> createState() => _MyHomeState();
@@ -31,8 +30,8 @@ class _MyHomeState extends State<Home> {
 
   final initialMarker =
   Marker(
-    width: 50.0,
-    height: 50.0,
+    width: 20.0,
+    height: 20.0,
     point: LatLng(52.376372, 4.908066),
     child: const Icon(
         Icons.location_on,
@@ -46,6 +45,7 @@ class _MyHomeState extends State<Home> {
 
   }
   getAddresses(value, lat, lon) async {
+    markers.clear();
     final Map<String, String> queryParameters = {'key': '$apiKey'};
     queryParameters['lat'] = '$lat';
     queryParameters['lon'] = '$lon';
@@ -70,15 +70,16 @@ class _MyHomeState extends State<Home> {
                     showModalBottomSheet<void>(
                    context: context,
                    builder: (BuildContext context) {
-                     return  SizedBox(
-                       height: 200,
+                     return  Container(
+                       height: 100,
                        width: 500,
+                       padding: EdgeInsets.all(10),
                        child: Column(
                            mainAxisAlignment: MainAxisAlignment.start,
                            children: [
                              Text(poi['name'],
                                style:const TextStyle(
-                                 fontSize: 30,
+                                 fontSize: 20,
 
                                ),
                              ),

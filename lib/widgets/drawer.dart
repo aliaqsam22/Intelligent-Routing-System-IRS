@@ -7,6 +7,9 @@ import '../drawer_pages/track_order.dart';
 
 import '../drawer_pages/privacy.dart';
 import '../drawer_pages/term_condition.dart';
+import '../pages_/home.dart';
+import '../pages_/route.dart';
+import '../pages_/weathermap.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -59,7 +62,7 @@ class _MyDrawerState extends State<MyDrawer> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MyTrackO()));
+                            builder: (context) => const Home()));
                   },
                   icon: const Icon(Icons.arrow_forward_ios_sharp),
                   color: Colors.black54,
@@ -83,7 +86,7 @@ class _MyDrawerState extends State<MyDrawer> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MyFeedBack()));
+                            builder: (context) =>  MyRoute()));
                   },
                   icon: const Icon(Icons.arrow_forward_ios_sharp),
                   color: Colors.black54,
@@ -103,7 +106,7 @@ class _MyDrawerState extends State<MyDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MyPrivacy()));
+                              builder: (context) =>  WeatherMap()));
                     },
                     icon: const Icon(
                       Icons.arrow_forward_ios_sharp,

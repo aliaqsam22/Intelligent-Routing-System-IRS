@@ -17,9 +17,7 @@ class _MainHomeState extends State<MainHome> {
   int _currentIndex = 0;
 
   final List<Widget> _screens = [
-    const Home(
-      title: 'home',
-    ),
+    const Home(),
     MyRoute(),
     WeatherMap(),
   ];
@@ -40,7 +38,7 @@ class _MainHomeState extends State<MainHome> {
                 context: context,
                 builder: (BuildContext context) {
                   return SizedBox(
-                    height: 500,
+                    height: 250,
                     width: 500,
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -60,12 +58,12 @@ class _MainHomeState extends State<MainHome> {
                                 padding: const EdgeInsets.all(8),
                                 color: Colors.teal[100],
                                 child: const Text(
-                                    "He'd have you all unravel at the"),
+                                    "Dark Map"),
                               ),
                               Container(
                                 padding: const EdgeInsets.all(8),
                                 color: Colors.teal[200],
-                                child: const Text('Heed not the rabble'),
+                                child: const Text('Light Map'),
                               ),
                             ],
                           ))
