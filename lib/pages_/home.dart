@@ -71,7 +71,7 @@ class _MyHomeState extends State<Home> {
                    context: context,
                    builder: (BuildContext context) {
                      return  Container(
-                       height: 100,
+                       height: 200,
                        width: 500,
                        padding: EdgeInsets.all(10),
                        child: Column(

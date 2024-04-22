@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:osm_map/pages_/profile.dart';
 import 'widgets/drawer.dart';
 import 'widgets/maptypedropdown.dart';
 import 'pages_/route.dart';
@@ -20,6 +21,7 @@ class _MainHomeState extends State<MainHome> {
     const Home(),
     MyRoute(),
     WeatherMap(),
+    ProfileScreen()
   ];
   String selectedoption = 'hello';
 

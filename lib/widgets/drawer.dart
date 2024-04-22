@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:osm_map/pages_/profile.dart';
 import '../drawer_pages/feedback.dart';
 
 import '../drawer_pages/log_out.dart';
@@ -127,7 +128,7 @@ class _MyDrawerState extends State<MyDrawer> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MyReturnPolicy()));
+                              builder: (context) =>  ProfileScreen()));
                     },
                     icon: const Icon(
                       Icons.arrow_forward_ios_sharp,
