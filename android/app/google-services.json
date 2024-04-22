@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "951235225402",
+    "project_id": "intelligent-vehicle-routing",
+    "storage_bucket": "intelligent-vehicle-routing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951235225402:android:44c7dfcbf298c82f96d203",
+        "android_client_info": {
+          "package_name": "com.example.osm_map"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsHoA9SN7671mKLlbVrx1mqYf6Llb8Rc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

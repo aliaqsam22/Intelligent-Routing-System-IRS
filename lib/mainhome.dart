@@ -22,7 +22,6 @@ class _MainHomeState extends State<MainHome> {
     ),
     MyRoute(),
     WeatherMap(),
-    const MySignup(),
   ];
   String selectedoption = 'hello';
 
@@ -40,33 +39,37 @@ class _MainHomeState extends State<MainHome> {
               showModalBottomSheet<void>(
                 context: context,
                 builder: (BuildContext context) {
-                  return  SizedBox(
+                  return SizedBox(
                     height: 500,
                     width: 500,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [Text('Map Types',style: TextStyle(fontSize: 20)),
-                                 SizedBox(height: 10,),
-                                 Expanded(child:GridView.count(crossAxisCount: 2,
-                                 mainAxisSpacing: 10,
-                                   crossAxisSpacing: 10,
-                                   primary: false,
-                                   children: <Widget>[
-                                     Container(
-                                       padding: const EdgeInsets.all(8),
-                                       color: Colors.teal[100],
-                                       child: const Text("He'd have you all unravel at the"),
-                                     ),
-                                     Container(
-                                       padding: const EdgeInsets.all(8),
-                                       color: Colors.teal[200],
-                                       child: const Text('Heed not the rabble'),
-                                     ),
-
-                                   ],
-                                 )
-                                 )]
-                    ),
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text('Map Types', style: TextStyle(fontSize: 20)),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Expanded(
+                              child: GridView.count(
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 10,
+                            crossAxisSpacing: 10,
+                            primary: false,
+                            children: <Widget>[
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Colors.teal[100],
+                                child: const Text(
+                                    "He'd have you all unravel at the"),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.all(8),
+                                color: Colors.teal[200],
+                                child: const Text('Heed not the rabble'),
+                              ),
+                            ],
+                          ))
+                        ]),
                   );
                 },
               );
