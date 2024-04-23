@@ -42,9 +42,9 @@ void updateMarkers(List<Marker> newMarkers) {
                   options:MapOptions(center: tomtomHQ, zoom: 13.0),
                   children:[
 
-                    TileLayer(  urlTemplate: "https://api.tomtom.com/map/1/tile/basic/night/"
-                        "{z}/{x}/{y}.png?key={apiKey}",
-                      additionalOptions: {"apiKey": apiKey},
+                    TileLayer(
+                      urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                      userAgentPackageName: 'com.example.app',
                     ),
                     MarkerLayer(
                       markers: widget.markers,

@@ -81,9 +81,9 @@ class WeatherMapState extends State<WeatherMap>{
           InkWell(
             child:Stack(children:
             [
-              Icon(Icons.cloud,color: Colors.white70,size: 50,)
-              ,Center(child:Row(children:[Text(weatherdata['temp'].toString(),style: TextStyle(color: Colors.black),)
-              ,Text('°',style:TextStyle(color: Colors.black))])),]),
+              Icon(Icons.cloud,color: Colors.black,size: 50,)
+              ,Center(child:Row(children:[Text(weatherdata['temp'].toString(),style: TextStyle(color: Colors.white),)
+              ,Text('°',style:TextStyle(color: Colors.white))])),]),
             onTap: (){
               showModalBottomSheet<void>(
                   context: context,
@@ -195,9 +195,9 @@ class WeatherMapState extends State<WeatherMap>{
           options:MapOptions(center: tomtomHQ, zoom: 13.0),
           children:[
 
-            TileLayer(  urlTemplate: "https://api.tomtom.com/map/1/tile/basic/night/"
-                "{z}/{x}/{y}.png?key={apiKey}",
-              additionalOptions: {"apiKey": apiKey},
+            TileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              userAgentPackageName: 'com.example.app',
             ),
             MarkerLayer(
               markers: markers,
@@ -211,19 +211,19 @@ class WeatherMapState extends State<WeatherMap>{
 
                       hintText: 'Search',
                       fillColor: Colors.white70,
-                      filled: false,
+                      filled: true,
                       focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.circular(50),
                           borderSide: const BorderSide(
                             color: Colors.black54,
                           )),
                       enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.circular(50),
                           borderSide: const BorderSide(
                             color: Color(0xffDADADA),
                           )),
                       border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(8),
+                          borderRadius: BorderRadius.circular(50),
                           borderSide: const BorderSide(
                             color: Color(0xffDADADA),
                           )),

@@ -33,7 +33,7 @@ class _MyDrawerState extends State<MyDrawer> {
             children: [
               const DrawerHeader(
                   decoration: BoxDecoration(
-                      color: Colors.black54,
+                      color: Colors.black,
                       borderRadius: BorderRadiusDirectional.only(
                           bottomEnd: Radius.circular(60))),
                   child: ListTile(
@@ -56,7 +56,7 @@ class _MyDrawerState extends State<MyDrawer> {
               ListTile(
                 leading: const Icon(
                   Icons.home,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 trailing: IconButton(
                   onPressed: () {
@@ -66,7 +66,7 @@ class _MyDrawerState extends State<MyDrawer> {
                             builder: (context) => const Home()));
                   },
                   icon: const Icon(Icons.arrow_forward_ios_sharp),
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 title: const Text(
                   'Home',
@@ -76,7 +76,7 @@ class _MyDrawerState extends State<MyDrawer> {
               ListTile(
                 leading: const Icon(
                   Icons.route,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 title: const Text(
                   'Plan a Route',
@@ -90,13 +90,13 @@ class _MyDrawerState extends State<MyDrawer> {
                             builder: (context) =>  MyRoute()));
                   },
                   icon: const Icon(Icons.arrow_forward_ios_sharp),
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
               ),
               ListTile(
                 leading: const Icon(
                   Icons.cloud,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 title: const Text(
                   'Weather Map',
@@ -111,13 +111,13 @@ class _MyDrawerState extends State<MyDrawer> {
                     },
                     icon: const Icon(
                       Icons.arrow_forward_ios_sharp,
-                      color: Colors.black54,
+                      color: Colors.black,
                     )),
               ),
               ListTile(
                 leading: const Icon(
                   Icons.verified_user,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 title: const Text(
                   'Profile',
@@ -132,13 +132,13 @@ class _MyDrawerState extends State<MyDrawer> {
                     },
                     icon: const Icon(
                       Icons.arrow_forward_ios_sharp,
-                      color: Colors.black54,
+                      color: Colors.black,
                     )),
               ),
               ListTile(
                 leading: const Icon(
                   Icons.rule,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 title: const Text(
                   'Term & Condition',
@@ -152,13 +152,13 @@ class _MyDrawerState extends State<MyDrawer> {
                             builder: (context) => const MytermC()));
                   },
                   icon: const Icon(Icons.arrow_forward_ios_sharp),
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
               ),
               ListTile(
                 leading: const Icon(
                   Icons.logout,
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
                 title: const Text(
                   'Logout',
@@ -172,7 +172,7 @@ class _MyDrawerState extends State<MyDrawer> {
                             builder: (context) => const MyLogout()));
                   },
                   icon: const Icon(Icons.arrow_forward_ios_sharp),
-                  color: Colors.black54,
+                  color: Colors.black,
                 ),
               )
             ],

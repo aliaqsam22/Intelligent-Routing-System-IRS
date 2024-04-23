@@ -18,7 +18,7 @@ class _MyHomeState extends State<Home> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
+
     super.dispose();
   }
   void updateMarkers(List<Marker> newMarkers) {
@@ -26,7 +26,7 @@ class _MyHomeState extends State<Home> {
       markers = newMarkers;
     });
   }
-  final tomtomHQ = new LatLng(52.376372, 4.908066);
+  final tomtomHQ = new LatLng(33.6844, 73.0479);
 
   final initialMarker =
   Marker(
@@ -111,9 +111,9 @@ class _MyHomeState extends State<Home> {
       options:MapOptions(center: tomtomHQ, zoom: 13.0),
       children:[
 
-        TileLayer(  urlTemplate: "https://api.tomtom.com/map/1/tile/basic/night/"
-            "{z}/{x}/{y}.png?key={apiKey}",
-          additionalOptions: {"apiKey": apiKey},
+        TileLayer(
+          urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+          userAgentPackageName: 'com.example.app',
         ),
         MarkerLayer(
           markers: markers,
@@ -127,19 +127,19 @@ class _MyHomeState extends State<Home> {
 
                 hintText: 'Search',
                 fillColor: Colors.white70,
-                filled: false,
+                filled: true,
                 focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(50),
                     borderSide: const BorderSide(
                       color: Colors.black54,
                     )),
                 enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(50),
                     borderSide: const BorderSide(
                       color: Color(0xffDADADA),
                     )),
                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(50),
                     borderSide: const BorderSide(
                       color: Color(0xffDADADA),
                     )),
