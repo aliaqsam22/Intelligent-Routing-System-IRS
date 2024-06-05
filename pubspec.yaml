@@ -37,7 +37,7 @@ dependencies:
   cloud_firestore: ^4.15.4
   firebase_database: any
   firebase_messaging: ^14.7.17
-  flutter_local_notifications: ^16.3.2
+  flutter_local_notifications: ^16.3.2  # or the latest version
 
 dev_dependencies:
   flutter_test:
