@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MytermC extends StatelessWidget {
   const MytermC({super.key});
@@ -6,258 +7,196 @@ class MytermC extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 227, 208, 230),
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        title: const Text(
-          'Term and Condition ',
-        ),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
-      ),
-      body: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-          child: Column(
-            children: [
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '1. Acceptance of Terms:',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'By downloading, installing, or using the Health pill pharmacy App (the App), you agree to comply with and be bound by the following terms and conditions ("Terms"). If you do not agree to these Terms, please do not use the App.',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '2. Eligibility:',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'You must be at least 18 years old to use the Health pill pharmacy App, you confirm that you meet this age requirement.',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '3. User Accounts: ',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'The Health pill Pharmacy App provides access to pharmaceutical products and related services.'
-                  'You agree to use the App only for lawful purposes and in compliance with all applicable laws and regulations '
-                  'You will not use the App for any illegal or unauthorized purpose. You agree to provide accurate and complete information when creating an account and to update your information to keep it accurate and current.',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '4. Prescription Medications: ',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'a. The App may facilitate the purchase of prescription medications. You agree to provide accurate prescription information, and you acknowledge that prescription medications will only be dispensed with a valid prescription from a licensed healthcare professional.',
-                  style: TextStyle(
-                    fontFamily: 'Urbanst',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              Align(
-                  alignment: Alignment.bottomLeft,
-                  child: Text(
-                    'b. You are responsible for consulting with a healthcare professional to ensure the appropriateness of the prescribed medication.',
-                    style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
-                    ),
-                  )),
-              SizedBox(
-                height: 10,
-              ),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '5.  Privacy Policy: ',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  ' Your use of the App is also governed by our Privacy Policy, which can be found at privacy policy. By using the App, you consent to the collection and use of your information as described in privacy policy.'
-                  ' Please review our Privacy Policy to understand how we collect, use, and disclose information.',
-                  style: TextStyle(
-                    fontFamily: 'Urbanst',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '6. User Accounts: ',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  ' You may be required to create a user account to access certain features of the App.'
-                  ' You are responsible for maintaining the confidentiality of your account login information and for any activity that occurs under your account.',
-                  style: TextStyle(
-                    fontFamily: 'Urbanst',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '7. Ordering and Payment :',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'The App provides information on available products and facilitates the ordering process.'
-                  'Payment for orders will be processed through secure payment methods, and you agree to provide accurate payment information.',
-                  style: TextStyle(
-                    fontFamily: 'Urbanst',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  '8. Termination:',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'We reserve the right to terminate or suspend your account and access to the App for violation of these terms or any applicable laws.'
-                  'You may terminate your account at any time by following the instructions of customer support.',
-                  style: TextStyle(
-                    fontFamily: 'Urbanst',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              SizedBox(height: 10),
-              Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  ' 9. Contact Information:',
-                  style: TextStyle(
-                      fontFamily: 'Urbanst',
-                      fontSize: 11,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.black),
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomLeft,
-                child: Text(
-                  'For inquires and assistance, you may contact us at healthpill@outlook.com',
-                  style: TextStyle(
-                    fontFamily: 'Urbanst',
-                    fontSize: 11,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Color(0xFFB2DFDB), // Light teal
+              Color(0xFF80CBC4), // Teal
+              Color(0xFF4DB6AC), // Dark teal
             ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
+        ),
+        child: Column(
+          children: [
+            AppBar(
+              elevation: 0,
+              centerTitle: true,
+              title: Text(
+                'Terms and Conditions',
+                style: GoogleFonts.poppins(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              leading: IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: const Icon(Icons.arrow_back),
+              ),
+              backgroundColor: Colors.transparent,
+            ),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '1. Acceptance of Terms:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'By downloading, installing, or using the Map Navigator App ("the App"), you agree to comply with and be bound by the following terms and conditions ("Terms"). If you do not agree to these Terms, please do not use the App.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '2. Eligibility:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'You must be at least 13 years old to use the Map Navigator App. By using the App, you confirm that you meet this age requirement.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '3. User Accounts:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'You may be required to create a user account to access certain features of the App. You agree to provide accurate and complete information when creating an account and to update your information to keep it accurate and current. You are responsible for maintaining the confidentiality of your account login information and for any activity that occurs under your account.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '4. Location Data:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'The App collects and uses your location data to provide navigation and map services. By using the App, you consent to the collection, use, and sharing of your location data as described in our Privacy Policy.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '5. Privacy Policy:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'Your use of the App is also governed by our Privacy Policy, which can be found at [privacy policy URL]. By using the App, you consent to the collection and use of your information as described in our Privacy Policy.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '6. Use of the App:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'You agree to use the App only for lawful purposes and in compliance with all applicable laws and regulations. You will not use the App for any illegal or unauthorized purpose.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '7. Termination:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'We reserve the right to terminate or suspend your account and access to the App for violation of these Terms or any applicable laws. You may terminate your account at any time by following the instructions provided in the App.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        '8. Contact Information:',
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        'For inquiries and assistance, you may contact us at support@mapnavigator.com.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
